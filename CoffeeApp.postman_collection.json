@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "705193d0-8c82-46e2-8f93-53696b160620",
+		"name": "CoffeeApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27524146"
+	},
+	"item": [
+		{
+			"name": "GetAllCoffees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7228/v1/coffees",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7228",
+					"path": [
+						"v1",
+						"coffees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRecommedation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"consumptions\": [\r\n    {\r\n      \"code\": \"blk\",\r\n      \"time\": 120\r\n    },\r\n    {\r\n      \"code\": \"lat\",\r\n      \"time\": 90\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7228/v1/calculate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7228",
+					"path": [
+						"v1",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
